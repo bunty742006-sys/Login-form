@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+
+    <input type="text" id="username"
+           placeholder="Enter Username"><br><br>
+
+    <input type="password" id="password"
+           placeholder="Enter Password"><br><br>
+
+    <button onclick="validateLogin()">Login</button>
+
+    <p id="result"></p>
+
+    <script>
+        function validateLogin() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if (user === "admin" && pass === "1234") {
+                document.getElementById("result").innerHTML =
+                    "Login Successful!";
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    "Invalid Username or Password";
+            }
+        }
+    </script>
+</body>
+</html>
